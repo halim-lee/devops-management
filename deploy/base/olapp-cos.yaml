@@ -4,7 +4,7 @@ metadata:
   name: cos
 spec:
   applicationImage: 'image-registry.openshift-image-registry.svc:5000/dev/cos'
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   service:
     annotations:
       service.beta.openshift.io/serving-cert-secret-name: cos-tls
