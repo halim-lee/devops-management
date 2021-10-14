@@ -1,10 +1,11 @@
-apiVersion: openliberty.io/v1beta1
-kind: OpenLibertyApplication
+apiVersion: app.stacks/v1beta1
+kind: RuntimeComponent
 metadata:
   name: cos
 spec:
   applicationImage: 'image-registry.openshift-image-registry.svc:5000/dev/cos'
   pullPolicy: Always
+  serviceAccountName: pipeline
   service:
     annotations:
       service.beta.openshift.io/serving-cert-secret-name: cos-tls
